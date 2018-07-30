@@ -1,6 +1,6 @@
 using Microsoft.AspNetCore.Mvc;
 
-namespace Signal.Web.Controllers
+namespace Counter.Web.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]

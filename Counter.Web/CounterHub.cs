@@ -1,26 +1,8 @@
 using Microsoft.AspNetCore.SignalR;
 using System.Threading.Tasks;
 
-namespace Signal.Web
+namespace Counter.Web
 {
-    public class ChatHub : Hub
-    {
-        public async Task SendMessage(string user, string message)
-        {
-            await Clients.All.SendAsync("ReceiveMessage", user, message);
-        }
-
-        public Task<string> Greeter(string name)
-        {
-            return Task.FromResult($"Hello {name}");
-        }
-
-        public string MyGreeter(string name)
-        {
-            return $"Hello sync {name}";
-        }
-    }
-
     public class CounterHub : Hub
     {
         private int _counter;
